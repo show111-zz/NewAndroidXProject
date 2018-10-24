@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("LHF","on create"); // 第一次调用
 
+        if(savedInstanceState != null){
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d("Lhf", tempData);
+        }
+
         findViewById(R.id.btn_normal).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    // 在活动回收之前被调用，解决活动被回收临时数据得不到保存的问题
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String temData = "Something you just type";
+        outState.putString("data_key",temData);
     }
 
     // 不可见变为可见
