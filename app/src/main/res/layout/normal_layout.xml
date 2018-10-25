@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/btn1"
@@ -10,6 +11,19 @@
         android:layout_height="wrap_content"
         android:text="BroadcastReceiver"
         android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/et_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type something here"/>
+
+    <TextView
+        android:id="@+id/tv_read_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="this is the read data area!" />
+
 
 
 </LinearLayout>

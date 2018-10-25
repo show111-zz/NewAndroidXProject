@@ -22,6 +22,8 @@
         <activity android:name=".receiver.BroadActivity"/>
 
         <activity android:name=".receiver.LocalReceiverActivity"/>
+        <activity android:name=".storagedata.FileSaveDataActivity"/>
+        <activity android:name=".storagedata.SharedPreferenceActivity"/>
 
         <receiver android:name=".receiver.MyBroadcastReceiver"
             android:enabled="true"

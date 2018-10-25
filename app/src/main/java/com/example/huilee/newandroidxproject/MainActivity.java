@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.huilee.newandroidxproject.receiver.BroadActivity;
 import com.example.huilee.newandroidxproject.receiver.LocalReceiverActivity;
+import com.example.huilee.newandroidxproject.storagedata.FileSaveDataActivity;
+import com.example.huilee.newandroidxproject.storagedata.SharedPreferenceActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, SharedPreferenceActivity.class);
+                startActivity(intent);
 
 //                if(progressBar.getVisibility() == View.VISIBLE){
 //                    progressBar.setVisibility(View.GONE);
@@ -64,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
 //                progress+=10;
 //                progressBar.setProgress(progress);
 
-                ProgressDialog dialog = new ProgressDialog(MainActivity.this);
-                dialog.setTitle("this is title");
-                dialog.setMessage("Loading");
-                dialog.setCancelable(true);
-                dialog.show();
+//                ProgressDialog dialog = new ProgressDialog(MainActivity.this);
+//                dialog.setTitle("this is title");
+//                dialog.setMessage("Loading");
+//                dialog.setCancelable(true);
+//                dialog.show();
 
             }
         });
