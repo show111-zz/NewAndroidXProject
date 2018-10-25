@@ -1,4 +1,4 @@
-package com.example.huilee.newandroidxproject;
+package com.example.huilee.newandroidxproject.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,8 +9,14 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Toast;
 
+import com.example.huilee.newandroidxproject.R;
+
+/**
+ *  接收系统广播
+ */
 public class BroadActivity extends AppCompatActivity {
 
     NetworkChangeReceiver networkChangeReceiver;
@@ -22,6 +28,17 @@ public class BroadActivity extends AppCompatActivity {
         setContentView(R.layout.normal_layout);
 
         registerBroadReceiver();
+
+        // send my broadcast receiver
+        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.example.huilee.newandroidxproject.receiver.MyBroadcastReceiver");
+                sendBroadcast(intent);
+//                sendOrderedBroadcast(intent,null);
+            }
+        });
+
     }
 
     // register network broadcast receiver

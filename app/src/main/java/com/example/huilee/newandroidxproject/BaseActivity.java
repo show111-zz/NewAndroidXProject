@@ -13,6 +13,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("LHF","BaseActivity");
+        ActivityCollector.addActivity(this);
     }
 
     public static void actionStart(Context context,String data1, String data2){
@@ -22,4 +23,9 @@ public class BaseActivity extends AppCompatActivity {
         context.startActivity(intent);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
+    }
 }

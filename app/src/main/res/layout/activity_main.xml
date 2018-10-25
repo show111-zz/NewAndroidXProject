@@ -21,6 +21,13 @@
         android:text="Dialog"
         android:textAllCaps="true"/>
 
+    <Button
+        android:id="@+id/btn_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local Receiver"
+        android:textAllCaps="false"/>
+
     <ProgressBar
         android:id="@+id/pb_bar"
         android:layout_width="match_parent"
@@ -28,10 +35,6 @@
         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
         android:max="100"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+
 
 </LinearLayout>

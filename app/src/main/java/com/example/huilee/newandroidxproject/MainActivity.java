@@ -3,9 +3,6 @@ package com.example.huilee.newandroidxproject;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.example.huilee.newandroidxproject.receiver.BroadActivity;
+import com.example.huilee.newandroidxproject.receiver.LocalReceiverActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setCancelable(true);
                 dialog.show();
 
+            }
+        });
+
+        findViewById(R.id.btn_receiver).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,LocalReceiverActivity.class);
+                startActivity(intent);
             }
         });
 
