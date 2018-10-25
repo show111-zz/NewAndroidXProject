@@ -16,7 +16,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public static void actionStart(Context context,String data1, String data2){
-        Intent intent = new Intent(context,NormalActivity.class);
+        Intent intent = new Intent(context,DialogActivity.class);
         intent.putExtra("param1",data1);
         intent.putExtra("param2",data2);
         context.startActivity(intent);
