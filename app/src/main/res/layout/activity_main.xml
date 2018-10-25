@@ -11,12 +11,27 @@
         android:id="@+id/btn_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Normal"/>
+        android:text="Normal"
+        android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/btn_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialog"/>
+        android:text="Dialog"
+        android:textAllCaps="true"/>
+
+    <ProgressBar
+        android:id="@+id/pb_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

@@ -1,21 +1,39 @@
 package com.example.huilee.newandroidxproject;
 
+
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("LHF","MainActivity");
         setContentView(R.layout.activity_main);
         Log.d("LHF","on create"); // 第一次调用
+
+        ActionBar bar = getSupportActionBar();
+        if(bar != null){
+            bar.hide();
+        }
+
+
+        progressBar = findViewById(R.id.pb_bar);
 
         if(savedInstanceState != null){
             String tempData = savedInstanceState.getString("data_key");
@@ -33,10 +51,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+//                startActivity(intent);
+
+//                if(progressBar.getVisibility() == View.VISIBLE){
+//                    progressBar.setVisibility(View.GONE);
+//                } else {
+//                    progressBar.setVisibility(View.VISIBLE);
+//                }
+
+//                int progress = progressBar.getProgress();
+//                progress+=10;
+//                progressBar.setProgress(progress);
+
+                ProgressDialog dialog = new ProgressDialog(MainActivity.this);
+                dialog.setTitle("this is title");
+                dialog.setMessage("Loading");
+                dialog.setCancelable(true);
+                dialog.show();
+
             }
         });
+
+
     }
 
     // 在活动回收之前被调用，解决活动被回收临时数据得不到保存的问题
@@ -112,4 +149,14 @@ public class MainActivity extends AppCompatActivity {
 
     // finish()用来销毁一个活动 和back键一样的效果
 
+//    private void replaceFragment(Fragment fragment){
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.right_layout,fragment);
+//        transaction.addToBackStack(null); // 将一个事务添加到返回栈中
+//        transaction.commit();
+//    }
+
 }
+
+
