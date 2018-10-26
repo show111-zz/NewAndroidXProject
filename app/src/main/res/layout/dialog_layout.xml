@@ -19,6 +19,34 @@
         android:text="restore data"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add data"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update data"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete data"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="query data"
+        android:textAllCaps="false"/>
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"

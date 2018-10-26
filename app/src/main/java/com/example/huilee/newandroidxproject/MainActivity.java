@@ -17,6 +17,7 @@ import com.example.huilee.newandroidxproject.receiver.BroadActivity;
 import com.example.huilee.newandroidxproject.receiver.LocalReceiverActivity;
 import com.example.huilee.newandroidxproject.storagedata.FileSaveDataActivity;
 import com.example.huilee.newandroidxproject.storagedata.SharedPreferenceActivity;
+import com.example.huilee.newandroidxproject.storagedata.SqlDataSaveActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SharedPreferenceActivity.class);
+                Intent intent = new Intent(MainActivity.this, SqlDataSaveActivity.class);
                 startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, SharedPreferenceActivity.class);
+//                startActivity(intent);
 
 //                if(progressBar.getVisibility() == View.VISIBLE){
 //                    progressBar.setVisibility(View.GONE);
