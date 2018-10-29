@@ -36,7 +36,6 @@ public class ProviderDataActivity extends AppCompatActivity {
         setContentView(R.layout.user_permission_layout);
 
         contactsView = findViewById(R.id.lv_contact);
-
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contactsList);
         contactsView.setAdapter(adapter);
 
@@ -61,8 +60,8 @@ public class ProviderDataActivity extends AppCompatActivity {
                 }
                 adapter.notifyDataSetChanged();
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             if (cursor != null) {
                 cursor.close();
