@@ -29,6 +29,7 @@
         <activity android:name=".storagedata.SharedPreferenceActivity"/>
         <activity android:name=".storagedata.SqlDataSaveActivity"/>
         <activity android:name=".CProvider.UserPermissionActivity"/>
+        <activity android:name=".notification.MyNotificationActivity"/>
 
         <receiver android:name=".receiver.MyBroadcastReceiver"
             android:enabled="true"

@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.huilee.newandroidxproject.CProvider.UserPermissionActivity;
+import com.example.huilee.newandroidxproject.notification.MyNotificationActivity;
 import com.example.huilee.newandroidxproject.receiver.BroadActivity;
 import com.example.huilee.newandroidxproject.receiver.LocalReceiverActivity;
 import com.example.huilee.newandroidxproject.storagedata.FileSaveDataActivity;
@@ -55,9 +56,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this,UserPermissionActivity.class);
+                Intent intent = new Intent(MainActivity.this,MyNotificationActivity.class);
                 startActivity(intent);
+
+//                Intent intent = new Intent(MainActivity.this,UserPermissionActivity.class);
+//                startActivity(intent);
 
 //                Intent intent = new Intent(MainActivity.this, SqlDataSaveActivity.class);
 //                startActivity(intent);
